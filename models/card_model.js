@@ -10,7 +10,7 @@ const CardSchema = new Schema({
     rulesText: String,
     power: String,
     toughness: String,
-    art: String,
+    imageURL: String,
     usage: 0
   })
 
