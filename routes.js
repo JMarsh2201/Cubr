@@ -20,6 +20,7 @@ module.exports = (router) => {
 
         let mtgCard = await getMtgCard
 
+        card.name = mtgCard.name
         card.cardTypes = mtgCard.types
         card.manaCost = mtgCard.manaCost
         card.colors = mtgCard.colors
@@ -28,7 +29,7 @@ module.exports = (router) => {
             card.power = mtgCard.power
             card.toughness = mtgCard.toughness
         }
-        card.art = mtgCard.imageUrl
+        card.imageURL = mtgCard.imageUrl
         
         card.save((err) => {
             if (err) res.send(err)
